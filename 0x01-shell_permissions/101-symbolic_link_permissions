@@ -1,2 +1,2 @@
 #!/bin/bash
-102-if_only
+chown -h vincent:staff _hello
