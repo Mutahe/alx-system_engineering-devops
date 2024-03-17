@@ -1,0 +1,23 @@
+Once you type google.com and press enter, the browser establishes that the request is a URL, by checking the hostname. A few other actions are carried out before output can be displayed on the browser, as discussed below.
+
+DNS LOOKUP
+Your browser sends a request to the domain name system which functions as an address book for all domain names. The domain name is then translated into an IP address.
+Servers communicate with IP addresses and not domain names and that is why the domain name needs to be translated. The browser translates the url to the IP address.
+The browser then searches for the IP address translation in the DNS Cache of the browser. If it does not find it there, it looks up in the operating system and checks the local host file of the local computer and then the OS cache. If it does not find it, it checks with the Internet Service Provider.
+The browser then sends a HTTP request to the server. The browser sends packets to the domain name (protocol, domain and path).
+
+
+In order to establish a connection between the browser and  the server, a three way handshake must be established. This connects the server and the browser via the IP address. This connection type is called TCP(Transmission Control Protocol).
+
+If your computer is situated behind a firewall, the firewall verifies the request being launched is authorized  before granting it. The server goes through the same process if it is also behind a firewall.
+
+Now that connection has been established, the browser sends the https request using a security protocol like SSL(Secure Sockets Layer).
+
+Companies like Google face high traffic in their sites, thus, they maintain multiple servers and use a load balancer to distribute requests among the servers. In this case, the load balancer receives the requests and sends it to a specific server based on its algorithm.
+
+The server upon receiving the request sends back a https response to the load balancer, which in turn sends it back to the browser. The response entails HTML, CSS and JavaScript files that make up the webpage.
+
+If contents such as google search results are required, the web server can request it from the application server, which in turn requests data from a database server. 
+
+Finally, the browser renders the output of this whole process and displays the webpage to you
+
